@@ -17,12 +17,16 @@ print("I need the numnbers for this month's report /nremember I can only accept 
 
 entries = int(input("How many record will you enter?  "))
 
-
+for i in range(entries):
+    prof = int(input("enter profits "))
+    sale = int(input("enter sales "))
+    profitInput.append(prof)
+    salesInput.append(sale)
 
 reprotData = pd.DataFrame(report)
 
-reprotData[['profits', 'sales']].plot()
-plt.savefig('graph2.png')
+reprotData[['profits', 'sales']].plot(kind='bar')
+plt.savefig('graph3.png')
 
 
 
